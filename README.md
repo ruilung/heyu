@@ -20,14 +20,14 @@ Data format
     }
 }
   
-程式的部份我寫的少，主要還是做系統部份的多
-這題我會上網找一個來抄抄改改，目前粗看會是這個 (因PYTHON相對熟悉)
-https://dev.to/paurakhsharma/flask-rest-api-part-0-setup-basic-crud-api-4650
-然後  我會確認ID重覆是不是有問題 (username不一定是唯一的)
-如果要改可能再加個UID 做為唯一值，或者要把ID+MOBILE做成唯一值
-  
-看貴司的職務說明也應是偏系統，可能的話，我們來聊聊監控、高可用、系統管理等等等
-如果是我誤會了，這職務要寫很多的CODE，那我放棄
+程式的部份我寫的少，主要還是做系統部份的多<BR>
+這題我會上網找一個來抄抄改改，目前粗看會是這個 (因PYTHON相對熟悉)<BR>
+https://dev.to/paurakhsharma/flask-rest-api-part-0-setup-basic-crud-api-4650<BR>
+然後  我會確認ID重覆是不是有問題 (username不一定是唯一的)<BR>
+如果要改可能再加個UID 做為唯一值，或者要把ID+MOBILE做成唯一值<BR>
+  <BR>
+看貴司的職務說明也應是偏系統，可能的話，我們來聊聊監控、高可用、系統管理等等等<BR>
+如果是我誤會了，這職務要寫很多的CODE，那我放棄<BR>
   
 Q2
 ===
