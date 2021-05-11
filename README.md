@@ -35,19 +35,19 @@ Build your application to container images and manage your service with docker-c
 Dockerfile
 docker-compose.yml
 
-這題應是承接上面
-所以他解題是下一個BASE IMAGE，然後把 環境佈好，把FLASK 與API CODE丟上去跑 
-用dockerfile寫成固定的設定檔，變成一個自訂的IMAGE
-https://medium.com/bb-tutorials-and-thoughts/how-to-dockerize-the-python-rest-api-with-flask-library-d2b51dd4a0ae
-粗粗看我會抄這個來改  (之所以是粗粗看，是系統建置過程中，先求有，再求好，也許未來我會改架構以優化或符合新需求)
-並在dockerfile中加一段動作 git clone / pull Q1的程式碼
-PS下，這段做出來的image我會給他專案名稱加功能的關鍵字在其中，因為很多專案很多IMAGE時，要確認人員的動作正確，會需要一些管理的功夫，命名就是其中一環
+這題應是承接上面<BR>
+所以他解題是下一個BASE IMAGE，然後把 環境佈好，把FLASK 與API CODE丟上去跑<BR> 
+用dockerfile寫成固定的設定檔，變成一個自訂的IMAGE<BR>
+https://medium.com/bb-tutorials-and-thoughts/how-to-dockerize-the-python-rest-api-with-flask-library-d2b51dd4a0ae<BR>
+粗粗看我會抄這個來改  (之所以是粗粗看，是系統建置過程中，先求有，再求好，也許未來我會改架構以優化或符合新需求)<BR>
+並在dockerfile中加一段動作 git clone / pull Q1的程式碼<BR>
+PS下，這段做出來的image我會給他專案名稱加功能的關鍵字在其中，因為很多專案很多IMAGE時，要確認人員的動作正確，會需要一些管理的功夫，命名就是其中一環<BR>
+<BR>
 
-
-再用dockecompose寫成固定的設定檔
-https://docs.docker.com/compose/gettingstarted/
-一樣找一個來抄抄改改
-再看怎啟程式 docker compose up -d (可能寫 init.d rc.local  or systemd ，在規範上 我定義程式的啟用一定要在開機時能自動運行，這樣基本有2個好處，1是不會忘記這台是跑什麼的東東，跑很多時也不會缺漏或錯置，2是可能供一線人員放大絕，在服務異常處理不行時，可以重啟機器)
+再用dockecompose寫成固定的設定檔<BR>
+https://docs.docker.com/compose/gettingstarted/<BR>
+一樣找一個來抄抄改改<BR>
+再看怎啟程式 docker compose up -d (可能寫 init.d rc.local  or systemd ，在規範上 我定義程式的啟用一定要在開機時能自動運行，這樣基本有2個好處，1是不會忘記這台是跑什麼的東東，跑很多時也不會缺漏或錯置，2是可能供一線人員放大絕，在服務異常處理不行時，可以重啟機器)<BR>
 
 
 Q3
@@ -60,5 +60,5 @@ docker-compose.yml
 README.md             # How to use
 Note
 We will clone your git repository and verify in local dev environment
-
-我沒有CODE，只有思維如上所述，如果不合適，我很抱歉
+<BR>
+我沒有CODE，只有思維如上所述，如果不合適，我很抱歉<BR>
