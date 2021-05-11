@@ -44,7 +44,9 @@ docker-compose.yml
 https://medium.com/bb-tutorials-and-thoughts/how-to-dockerize-the-python-rest-api-with-flask-library-d2b51dd4a0ae<BR>
 粗粗看我會抄這個來改  (之所以是粗粗看，是系統建置過程中，先求有，再求好，也許未來我會改架構以優化或符合新需求)<BR>
 並在dockerfile中加一段動作 git clone / pull Q1的程式碼<BR>
-PS下，這段做出來的image我會給他專案名稱加功能的關鍵字在其中，因為很多專案很多IMAGE時，要確認人員的動作正確，會需要一些管理的功夫，命名就是其中一環<BR>
+PS下
+- 如果是做到要上線的產品，那粗粗看的過程會有重覆的驗證，確保程式上線，上版，更新等的事項能符合預期
+- 這段做出來的image我會給他專案名稱加功能的關鍵字在其中，因為很多專案很多IMAGE時，要確認人員的動作正確，會需要一些管理的功夫，命名就是其中一環<BR>
 <BR>
 
 再用dockecompose寫成固定的設定檔<BR>
