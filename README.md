@@ -26,7 +26,10 @@ https://dev.to/paurakhsharma/flask-rest-api-part-0-setup-basic-crud-api-4650<BR>
 然後  我會確認ID重覆是不是有問題 (username不一定是唯一的)<BR>
 如果要改可能再加個UID 做為唯一值，或者要把ID+MOBILE做成唯一值<BR>
   <BR>
-看貴司的職務說明也應是偏系統，可能的話，我們來聊聊監控、高可用、系統管理等等等<BR>
+看貴司的職務說明也應是偏系統，可能的話，我們來聊聊
+      - 監控
+      - 高可用
+      - 系統管理等等等<BR>
 如果是我誤會了，這職務要寫很多的CODE，那我放棄<BR>
   
 Q2
