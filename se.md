@@ -20,7 +20,31 @@ rpm -ivh  https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 mysql5.7
 ---
-rpm -ivh https://repo.mysql.com//mysql-community-release-el7.rpm
+rpm -ivh https://repo.mysql.com/mysql57-community-release-el7.rpm
+
+selinux
+---
+setenforce 0
+#for lab
+
+install
+---
+yum install nginx git 
+yum install mysql-server
+yum install php74 php74-fpm php74-mysql
+
+test db installaion
+---
+git clone https://github.com/datacharmer/test_db .
+mysql < employees.sql
+
+nginx config
+```
+https://www.rosehosting.com/blog/how-to-install-php-7-4-with-nginx-on-ubuntu-20-04/
+
+```
+
+
 
 
 Please implement mysqldump backup shell(shell script)
