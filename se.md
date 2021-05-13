@@ -115,3 +115,17 @@ app                   # application location
 Dockerfile
 docker-compose.yml
 README.md             # How to use
+
+```
+https://www.google.com/search?q=docker+hub+php+laravel+mysql&sxsrf=ALeKk00CI3ls573Z8H5isVokCztOOfmLBg%3A1620899744649&ei=oPecYKL7Jqe1mAWDnrfICw&oq=docker+hub+php+laravel+my&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCCEQoAE6BwgAEEcQsAM6BwgAELADEEM6BQgAEMsBOgQIABBDOgIIADoHCAAQhwIQFDoFCAAQkQI6BggAEBYQHjoICCEQFhAdEB5QngtY3jNgqEBoAXACeACAAacBiAGNB5IBBDEwLjGYAQCgAQGqAQdnd3Mtd2l6yAEKwAEB&sclient=gws-wiz
+
+可能抄其中一個，然後看那個BASE IMAGE比較好，再依他來用
+然後架構我會做成
+一台web (nginx+php
+一台db (mysql 加掛一個DATA VOL放資料
+用 docker-compose綁在一起
+
+執行程式的方法就如上上，看base image 中缺什麼就RUN給他
+備份如上，排排程，備份到不同的VOL，以強化降低風險
+
+```
