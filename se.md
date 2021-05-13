@@ -9,6 +9,7 @@ virtual hostname: heyu.site
 
 
 base os=centos 7
+#用ubuntu也很好，他的REPO會比較新
 extra repo=remi / mysql
 
 
@@ -31,6 +32,19 @@ software install
 yum install nginx git 
 yum install mysql-server
 yum install php74 php74-php-fpm php74-php-mysql composer
+
+
+lavaral project
+----
+mkdir -p /var/www/php
+cd /var/www/php
+composer create-project --prefer-dist laravel/laravel testproj
+
+[root@localhost testproj]# cat index.php 
+<?php
+phpinfo();
+?>
+#test for php-fpm working or not
 
 service
 ---
@@ -64,17 +78,7 @@ location ~ \.php$ {
 }
 
 
-lavaral project
-----
-mkdir -p /var/www/php
-cd /var/www/php
-composer create-project --prefer-dist laravel/laravel testproj
 
-[root@localhost testproj]# cat index.php 
-<?php
-phpinfo();
-?>
-#test for php-fpm working or not
 
 
 
