@@ -5,7 +5,7 @@ web server: nginx
 please config nginx and add new site for laravel default page
 virtual hostname: heyu.site
 
----
+```
 
 ray note>>
 base os=centos 7
@@ -44,7 +44,7 @@ mysql < employees.sql
 #lab store user/pd in my.cnf
 
 nginx config
-```
+
 https://www.rosehosting.com/blog/how-to-install-php-7-4-with-nginx-on-ubuntu-20-04/
 
 ```
