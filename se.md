@@ -27,16 +27,21 @@ selinux
 setenforce 0
 #for lab
 
-install
+software install
 ---
 yum install nginx git 
 yum install mysql-server
-yum install php74 php74-fpm php74-mysql
+yum install php74 php74-php-fpm php74-php-mysql
+
+service
+---
+systemctl enable --now nginx mysqld php74-php-fpm
 
 test db installaion
 ---
 git clone https://github.com/datacharmer/test_db .
 mysql < employees.sql
+#lab store user/pd in my.cnf
 
 nginx config
 ```
@@ -52,6 +57,22 @@ Import sample database(https://github.com/datacharmer/test_db) data to mysql
 use sed & awk to dump every database for mysql backup
 backup file name: mysql-(%Y%m%d%H)-database_name.tar.gz
 Delete Backupfiles older than 10 days using shell script
+```
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| employees          |
+| mysql              |
+| performance_schema |
+| sys                |
+```
+
+
+
+
+
 Build your application to container images and manage your service with docker-compose
 Dockerfile
 docker-compose.yml
