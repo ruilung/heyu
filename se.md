@@ -58,15 +58,15 @@ use sed & awk to dump every database for mysql backup
 backup file name: mysql-(%Y%m%d%H)-database_name.tar.gz
 Delete Backupfiles older than 10 days using shell script
 ```
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| employees          |
-| mysql              |
-| performance_schema |
-| sys                |
+db list
+===
+# mysql -e 'show databases;'|awk -F " " '{if (NR!=1) print $1}'
+information_schema
+employees
+mysql
+performance_schema
+sys
+
 ```
 
 
