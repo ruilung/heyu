@@ -39,6 +39,7 @@ lavaral project
 mkdir -p /var/www/php
 cd /var/www/php
 composer create-project --prefer-dist laravel/laravel testproj
+#test for laravel working or not??
 
 [root@localhost testproj]# cat index.php 
 <?php
@@ -104,6 +105,28 @@ mysql
 performance_schema
 sys
 
+backup shell script
+---
+#!/bin/bash
+
+#cd work_space or dump_space
+
+var_ts=$(date +"%Y%m%d%H")
+# ts for timestamp
+
+for var_db in $(mysql -e 'show databases;' |awk -F " " '{if (NR!=1) print $1}') 
+do
+  mysqldump --single-transaction ${var_db} > mysql-${var_ts}-${var_db}
+  #single-transaction for mysqldump: Got error: 1044: Access denied for user 'root'@'localhost' to database 'information_schema' when using LOCK TABLES
+
+  gzip mysql-${var_ts}-${var_db}
+ 
+  find ./ -type f -mtime +10 -name "mysql*.gz" | xargs -r "rm -rf"
+
+done
+
+#因為是整個DB備份，沒有TAR的需求，所以我不會在檔名中加上TAR，以免誤會
+#正式環境中密碼的保存會需要討論作法
 ```
 
 
